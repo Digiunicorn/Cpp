@@ -1,0 +1,29 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main() {
+    int a,b,c,x;
+    cin>>a>>b>>c;
+    if((a>b && a<c)||(a>c && a<b))
+        cout<<"The treasure is in the box which has the number "<<a<<endl;
+    else if((b>a && b<c)|| (b<a && b>c))
+        cout<<"The treasure is in the box which has the number "<<b<<endl;
+    else
+        cout<<"The treasure is in the box which has the number "<<c<<endl;
+    x=a;
+    while(b!=0){
+        int r=x%b;
+        x=b;
+        b=r;        
+    }
+    while(c!=0){
+        int r=x%c;
+        x=c;
+        c=r;
+    }
+    cout<<"The code to open the box is "<<x;
+    return 0;
+}
