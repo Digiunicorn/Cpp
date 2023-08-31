@@ -1,2 +1,2 @@
 # Cpp
-Repository containing my solutions to HackerRank coding challenges
+Repository containing my solutions to some popular cpp questions
